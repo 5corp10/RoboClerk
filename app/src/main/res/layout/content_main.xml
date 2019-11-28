@@ -65,13 +65,41 @@
             android:spinnerMode="dropdown"/>
     </LinearLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/i_net_deflx"
+        android:layout_width="102.5dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hrate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/i_net_defl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="I net D (mm)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/avf_net_deflx"
+        android:layout_width="102.5dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@+id/i_net_deflx"
+        app:layout_constraintTop_toBottomOf="@+id/hrate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/avf_net_defl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="aVF net D (mm)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <LinearLayout
         android:id="@+id/qrsduration"
         android:layout_width="102.5dp"
         android:layout_height="50dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/hrate"
-        app:layout_constraintTop_toBottomOf="@+id/hrate">
+        app:layout_constraintStart_toStartOf="@+id/i_net_deflx"
+        app:layout_constraintTop_toBottomOf="@+id/i_net_deflx">
 
         <TextView
             android:layout_width="match_parent"
@@ -108,7 +136,7 @@
         android:layout_width="102.5dp"
         android:layout_height="50dp"
         app:layout_constraintStart_toEndOf="@+id/qrsduration"
-        app:layout_constraintTop_toBottomOf="@+id/hrate">
+        app:layout_constraintTop_toBottomOf="@+id/i_net_deflx">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/qheight"
