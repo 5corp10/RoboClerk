@@ -179,9 +179,9 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
 
                         if (i < 0) {
                             if (avf < 0)
-                                dxs += "%.0f".format(-90 - (kotlin.math.sin(avf / i) * 180 / PI)).toString() + "\n"
+                                dxs += "%.0f".format(-90 - (sin(avf / i) * 180 / PI)).toString() + "\n"
                             else
-                                dxs += "%.0f".format(90 - (kotlin.math.sin(avf / i) * 180 / PI)).toString() + "\n"
+                                dxs += "%.0f".format(90 - (sin(avf / i) * 180 / PI)).toString() + "\n"
                         } else
                             dxs += "%.0f".format((sin(avf / i) * 180 / PI)).toString() + "\n"
 

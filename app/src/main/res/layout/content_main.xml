@@ -98,8 +98,8 @@
         android:layout_width="102.5dp"
         android:layout_height="50dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/i_net_deflx"
-        app:layout_constraintTop_toBottomOf="@+id/i_net_deflx">
+        app:layout_constraintStart_toEndOf="@+id/avf_net_deflx"
+        app:layout_constraintTop_toBottomOf="@+id/hrate">
 
         <TextView
             android:layout_width="match_parent"
@@ -117,77 +117,6 @@
             android:spinnerMode="dropdown" />
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pheight"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qrsduration">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pheight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="P h (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/qheight"
-        android:layout_width="102.5dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/qrsduration"
-        app:layout_constraintTop_toBottomOf="@+id/i_net_deflx">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/qheight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Q h (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rheight"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/pheight"
-        app:layout_constraintTop_toBottomOf="@+id/qrsduration">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/rheight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="R h (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sheight"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/rheight"
-        app:layout_constraintTop_toBottomOf="@+id/qrsduration">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sheight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="S h (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/theight"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="1dp"
-        app:layout_constraintStart_toEndOf="@+id/sheight"
-        app:layout_constraintTop_toBottomOf="@+id/qrsduration">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/theight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="T h (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
         android:id="@+id/printerval"
         android:layout_width="164dp"
@@ -197,7 +126,7 @@
         android:textAlignment="viewStart"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pheight" />
+        app:layout_constraintTop_toBottomOf="@+id/i_net_deflx" />
     <Spinner
         android:id="@+id/spinner_printerval"
         android:layout_width="164dp"
@@ -206,112 +135,13 @@
         android:spinnerMode="dropdown"
         app:layout_constraintTop_toBottomOf="@+id/printerval" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/qtinterval"
-        android:layout_width="246dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/printerval"
-        app:layout_constraintTop_toBottomOf="@+id/pheight">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/qtinterval"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="QT (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rrinterval"
-        android:layout_width="246dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pduration">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/rrinterval"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="RR (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/stinterval"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/stsegment"
-        app:layout_constraintTop_toBottomOf="@+id/qtinterval">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/stinterval"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ST (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tpinterval"
-        android:layout_width="164dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/rrinterval"
-        app:layout_constraintTop_toTopOf="@+id/rrinterval">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tpinterval"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="TR (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pduration"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qtinterval">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pduration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Pdur (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/prsegment"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/pduration"
-        app:layout_constraintTop_toBottomOf="@+id/qtinterval">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/prsegment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="PRseg (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/stsegment"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toEndOf="@+id/prsegment"
-        app:layout_constraintTop_toBottomOf="@+id/qtinterval">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/stsegment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="STseg (mm)" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
         android:id="@+id/dx"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rrinterval"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_printerval"
         android:textSize="20dp"
         android:padding="20dp"/>
 
